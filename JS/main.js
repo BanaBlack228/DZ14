@@ -1,3 +1,5 @@
+//Блок заданий по String 
+
 console.log("Первое Задание")
 //Первое Задание
 const StringLength = (str1, str2) => {
@@ -140,3 +142,10 @@ findCharacterIndices("Привет, мир!", "и");
 findCharacterIndices("JavaScript", "a");
 findCharacterIndices("Тестовая строка", "т");
 findCharacterIndices("Hello, world!", "z");
+
+
+//Блок заданий по Object
+
+
+console.log("Первое Задание")
+//Первое Задание
