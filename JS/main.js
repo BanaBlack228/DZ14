@@ -149,3 +149,187 @@ findCharacterIndices("Hello, world!", "z");
 
 console.log("Первое Задание")
 //Первое Задание
+ 
+let person = {
+    name: "Jhon",
+    age: 23,
+    city: "ST.Peterburg"
+}
+
+console.log(person.name)
+console.log(person.age)
+console.log(person.city)
+
+console.log("Второе Задание")
+//Второе Задание
+ 
+let car = {
+    make: "BMW",
+    model: "M4 Competition",
+    year: 2013
+}
+
+car.year = 2024;
+
+console.log(car.year)
+
+console.log("Третье Задание")
+//Третье Задание
+
+let book = {
+    title: "TH",
+    author: "BlueBerry"
+}
+book.publishedYear = true;
+
+console.log(book)
+
+console.log("Четвертое Задание")
+//Четвертое Задание
+
+let student = {
+    name: "Petr",
+    grade: 5,
+    age: 25
+}
+delete student.age;
+
+console.log(student)
+
+console.log("Пятое Задание")
+//Пятое Задание
+
+const product = {
+    id: 1,
+    name: 'Книга',
+    price: 200
+};
+
+function checkPrice(product) {
+    if ('price' in product) {
+        console.log("Свойство 'price' существует в объекте.");    } else {
+        console.log("Свойство 'price' не существует в объекте.");
+    }
+}
+
+checkPrice(product);
+checkPrice({id: 2, name: 'Телефон'}); 
+
+console.log("Шестое Задание")
+//Шестое Задание
+
+const fruits = {
+    apple: 2,
+    banana: 3,
+    orange: 5,
+    mango: 4
+};
+
+for (const fruit in fruits) {
+    console.log(`${fruit}: ${fruits[fruit]}`);
+}
+
+console.log("Седьмое Задание")
+//Седьмое Задание
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+const mergedObject = { ...obj1 }; 
+
+for (const key in obj2) {
+    if (mergedObject.hasOwnProperty(key)) {
+        mergedObject[key] += obj2[key]; } else {
+        mergedObject[key] = obj2[key];
+    }
+}
+
+console.log(mergedObject);
+
+console.log("Восьмое Задание")
+//Восьмое Задание
+
+const original = {
+    name: 'Alice',
+    age: 30,
+    city: 'New York'
+};
+
+const copy = { ...original }; 
+
+copy.age = 25;
+
+console.log('Original:', original);
+console.log('Copy:', copy);
+
+
+console.log("Девятое Задание")
+//Девятое Задание
+
+let students = {
+    name: "Alica",
+    age: 25,
+    specialty: "Робототехника",
+    items: {
+        progarmers: {
+            grade:5,
+            watch:100,
+        },
+        
+        biology: {
+            grade:4,
+            watch:80,
+        },
+
+        tehnology: {
+            grade: 5,
+            watch:50,
+        }
+
+    }
+}
+
+function properties(obj){
+    let i = 0;
+
+    for (const key in obj){
+        if (obj.hasOwnProperty(key)){
+            i++;
+            if (typeof obj[key] === 'object' && obj[key] !== null){
+                i += properties(obj[key]);
+            }
+        }
+    }
+    return i;
+}
+
+const totalProperties = properties(students);
+console.log(totalProperties);
+
+console.log("Десятое Задание")
+//Десятое Задание
+
+let empty = {}
+
+empty.name = "John";
+empty.surname = "Smith";
+empty.name = "Pete";
+delete empty.name;
+
+console.log(empty)
+
+console.log("Одинадцатое Задание")
+//Одинадцатое Задание
+
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
+ let sum = 0;
+
+ for(let key in salaries){
+    sum += salaries[key];
+ }
+
+ console.log(`Сумма всех зарплат: ${sum}`)
